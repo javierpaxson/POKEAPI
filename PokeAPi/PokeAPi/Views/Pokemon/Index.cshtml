@@ -1,0 +1,14 @@
+﻿@model PokeAPi.Models.MyClass
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index de pokemon</h2>
+@if (Model != null && Model.PokemonesList.Count() > 0)
+{
+    foreach (var item in Model.PokemonesList)
+    {
+        <p>@item.Name</p>
+    }
+}
+

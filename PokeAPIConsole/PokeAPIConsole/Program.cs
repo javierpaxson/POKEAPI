@@ -42,15 +42,41 @@ namespace PokeAPIConsole
                     Console.WriteLine($"#:{count} - {item.MoveMove.Name}");
                     count++;
                 }
+                
 
                 Console.WriteLine(pokemondetail.Species.Url);
                 Console.WriteLine(pokemondetail.Weight);
+                Console.WriteLine("--------------------------------------");
+                response = client.GetAsync("https://pokeapi.co/api/v2/pokemon").Result;
+                var pokemones = new Pokemones();
+                if (response.IsSuccessStatusCode)
+                {
+                    count = 1;
+                     result = response.Content.ReadAsStringAsync().Result;
+                    pokemones = JsonConvert.DeserializeObject<Pokemones>(result);
+                    foreach (var item in pokemones.Results)
+                    {
+                        Console.WriteLine($"#:{count} - {item.Name}");
+                        count++;
+                    }
+                }
             }
             Console.ReadLine();
         }
     }
-
-
+    public partial class Pokemones 
+    {
+        [JsonProperty("results")]
+        public Result[] Results { get; set; }
+    }
+    public partial class Result
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
+        [JsonProperty("url")]
+        public string Url { get; set; }
+        
+    }
     public partial class PokemonDetail
     {
         [JsonProperty("abilities")]
