@@ -126,7 +126,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Ability.cs" />
-    <Compile Include="Models\MyClass.cs" />
+    <Compile Include="Models\GetPokemons.cs" />
     <Compile Include="Models\PokemonDetail.cs" />
     <Compile Include="Models\Pokemones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

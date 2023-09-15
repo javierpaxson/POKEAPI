@@ -40,8 +40,8 @@ namespace PokeAPi.Controllers
                 //pokemondetail = JsonConvert.DeserializeObject<PokemonDetail>(result);
             }
 
-            var pokemonesL = new MyClass();
-            pokemonesL = new MyClass { PokemonesList = nombre };            
+            var pokemonesL = new GetPokemons();
+            pokemonesL = new GetPokemons { PokemonesList = nombre };            
             return View (pokemonesL);
         }
     }
