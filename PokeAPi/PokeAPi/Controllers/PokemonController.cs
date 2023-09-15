@@ -44,6 +44,10 @@ namespace PokeAPi.Controllers
             pokemonesL = new GetPokemons { PokemonesList = nombre };            
             return View (pokemonesL);
         }
+        public ActionResult Hello()
+        {
+            return PartialView ();
+        }
     }
    
 

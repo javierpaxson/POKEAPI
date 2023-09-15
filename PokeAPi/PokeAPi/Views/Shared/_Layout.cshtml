@@ -14,9 +14,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="../../Content/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
-    <link href="../../Content/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    @*<link href="../../Content/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
     <link href="../../Content/assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="../../Content/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="../../Content/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">*@
     <!--This page css - Morris CSS -->
     <link href="../../Content/assets/plugins/c3-master/c3.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -84,10 +84,10 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        
-                        
+
+
                     </ul>
-                    
+
                 </div>
             </nav>
         </header>
@@ -97,109 +97,77 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <aside class="left-sidebar">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- User profile -->
-                <div class="user-profile" style="background: url(../../Content/assets/images/background/user-info.jpg) no-repeat;">
-                    <!-- User profile image -->
-                    <div class="profile-img"> <img src="../../Content/assets/images/users/profile.png" alt="user" /> </div>
-                    <!-- User profile text-->
-                    <div class="profile-text">
-                        <div class="dropdown-menu animated flipInY">
-                            <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a> <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a> <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
-                            <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End User profile text-->
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-small-cap">PERSONAL</li>
-                        <li>
-                            <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
-                            <ul aria-expanded="false" class="collapse">                                
-                                <li>@Html.ActionLink("Pokemon", "Index", "Pokemon", new { area = "" }, new { @class = "nav-link" })</li>
-                            </ul>
-                        </li>
-                        
-                        
-                       
-                       
-                      
-                       
-                      
-                      
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-            <!-- Bottom points-->
-            @RenderBody()
-           
-        </aside>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
-        <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <div class="row page-titles">
-                    <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Dashboard</h3>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                    </div>
-                   
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <!-- Row -->
-                
-               
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-               
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
-            </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer"> © 2023 Jesus Paul Marin Moreno</footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
-        </div>
+        @*<div class="page-wrapper">*@
         <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        @*<footer class="footer"> © 2023 Jesus Paul Marin Moreno</footer>*@
+        <!-- ============================================================== -->
+        <!-- End footer -->
         <!-- ============================================================== -->
     </div>
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- User profile -->
+            <div class="user-profile" style="background: url(../../Content/assets/images/background/user-info.jpg) no-repeat;">
+                <!-- User profile image -->
+                <div class="profile-img"> <img src="../../Content/assets/images/users/profile.png" alt="user" /> </div>
+                <!-- User profile text-->
+                <div class="profile-text">
+                    <div class="dropdown-menu animated flipInY">
+                        <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a> <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a> <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
+                        <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                    </div>
+                </div>
+            </div>
+            <!-- End User profile text-->
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li class="nav-small-cap">PERSONAL</li>
+                    <li>
+                        <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li>@Html.ActionLink("Pokemon", "Index", "Pokemon", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Hello", "Hello", "Pokemon", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li><a href="@Url.Action("Hello", "Pokemon")">Mis colaboradores</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+
+
+
+
+
+                </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+        <!-- Bottom points-->
+
+
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+    @*</div>*@
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
@@ -236,6 +204,9 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="../../Content/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    <div>
+        @RenderBody()
+    </div>
 </body>
 
 </html>
