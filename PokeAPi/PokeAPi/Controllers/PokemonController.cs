@@ -21,9 +21,10 @@ namespace PokeAPi.Controllers
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
             var response = client.GetAsync("https://pokeapi.co/api/v2/pokemon/25").Result;
-            var pokemondetail = new PokemonDetail();
+            var pokemonDetail = new PokemonDetail();
             var pokemones = new Pokemones();
             List<Result> nombre = new List<Result>();
+            List<PokemonDetail> pokemonDetailList = new List<PokemonDetail>();  
             
             if (response.IsSuccessStatusCode)
             {
@@ -34,6 +35,18 @@ namespace PokeAPi.Controllers
                 foreach (var pokemon in pokemones.Results)
                 {
                     nombre.Add(pokemon);
+                    //invocar de nuevo el api con la url del pokemon
+                     response = client.GetAsync(pokemon.Url).Result;
+                    //validar si la respuesta fue satisfactoria
+                    if (response.IsSuccessStatusCode)
+                    {
+                        //deserealizar 
+                        result = response.Content.ReadAsStringAsync().Result;
+                        pokemonDetail = JsonConvert.DeserializeObject<PokemonDetail>(result);
+                        pokemonDetailList.Add(pokemonDetail);
+                    }                    
+                    //agregar ala lista
+
                 }
 
                 //var result = response.Content.ReadAsStringAsync().Result;
@@ -41,7 +54,7 @@ namespace PokeAPi.Controllers
             }
 
             var pokemonesL = new GetPokemons();
-            pokemonesL = new GetPokemons { PokemonesList = nombre };            
+            pokemonesL = new GetPokemons { PokemonesList = nombre, PokemonDetailList = pokemonDetailList };            
             return View (pokemonesL);
         }
         public ActionResult Hello()

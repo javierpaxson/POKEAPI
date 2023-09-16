@@ -8,5 +8,6 @@ namespace PokeAPi.Models
     public class GetPokemons
     {
         public virtual List<Result> PokemonesList { get; set; }
+        public virtual List<PokemonDetail> PokemonDetailList { get; set; }
     }
 }
