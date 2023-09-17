@@ -84,8 +84,6 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-
-
                     </ul>
 
                 </div>
@@ -106,6 +104,9 @@
         @*<div class="page-wrapper">*@
         <!-- ============================================================== -->
         <!-- Container fluid  -->
+        <div>
+            @RenderBody()
+        </div>
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
@@ -124,7 +125,7 @@
             <!-- User profile -->
             <div class="user-profile" style="background: url(../../Content/assets/images/background/user-info.jpg) no-repeat;">
                 <!-- User profile image -->
-                <div class="profile-img"> <img src="../../Content/assets/images/users/profile.png" alt="user" /> </div>
+                @*<div class="profile-img"> <img src="../../Content/assets/images/users/profile.png" alt="user" /> </div>*@
                 <!-- User profile text-->
                 <div class="profile-text">
                     <div class="dropdown-menu animated flipInY">
@@ -137,23 +138,13 @@
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li class="nav-small-cap">PERSONAL</li>
+                    
                     <li>
                         <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
                         <ul aria-expanded="false" class="collapse">
-                            <li>@Html.ActionLink("Pokemon", "Index", "Pokemon", new { area = "" }, new { @class = "nav-link" })</li>
-                           
-
+                            <li>@Html.ActionLink("Pokemon", "Index", "Pokemon", new { area = "" }, new { @class = "nav-link" })</li>           
                         </ul>
                     </li>
-
-
-
-
-
-
-
-
                 </ul>
             </nav>
             <!-- End Sidebar navigation -->
@@ -203,9 +194,7 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="../../Content/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-    <div>
-        @RenderBody()
-    </div>
+   
 </body>
 
 </html>
